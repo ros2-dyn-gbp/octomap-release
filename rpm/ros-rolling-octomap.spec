@@ -63,6 +63,7 @@ on an octree. See http://octomap.github.io for details.
     -DCMAKE_PREFIX_PATH="%{bloom_prefix}" \
     -DSETUPTOOLS_DEB_LAYOUT=OFF \
     -DBUILD_TESTING=OFF \
+    -DCMAKE_SKIP_INSTALL_RPATH=ON \
 
 %cmake3_build
 
