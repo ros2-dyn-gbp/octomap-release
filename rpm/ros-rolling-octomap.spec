@@ -66,6 +66,7 @@ on an octree. See http://octomap.github.io for details.
 %if !0%{?with_tests}
     -DBUILD_TESTING=OFF \
 %endif
+    -DCMAKE_SKIP_INSTALL_RPATH=ON \
 
 %cmake3_build
 
