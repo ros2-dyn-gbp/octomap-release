@@ -1,0 +1,24 @@
+From 7baae80a75ab2963e9233103c44bd24ff7e63742 Mon Sep 17 00:00:00 2001
+From: Scott K Logan <logans@cottsay.net>
+Date: Fri, 22 Mar 2024 21:13:48 -0500
+Subject: [PATCH] Stop installing RPATHs
+
+---
+ rpm/ros-rolling-octomap.spec | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/rpm/ros-rolling-octomap.spec b/rpm/ros-rolling-octomap.spec
+index d65f3d72346d..db1e915de8a2 100644
+--- a/rpm/ros-rolling-octomap.spec
++++ b/rpm/ros-rolling-octomap.spec
+@@ -66,6 +66,7 @@ on an octree. See http://octomap.github.io for details.
+ %if !0%{?with_tests}
+     -DBUILD_TESTING=OFF \
+ %endif
++    -DCMAKE_SKIP_INSTALL_RPATH=ON \
+ 
+ %cmake3_build
+ 
+-- 
+2.44.0
+
